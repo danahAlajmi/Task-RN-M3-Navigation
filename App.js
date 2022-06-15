@@ -1,8 +1,14 @@
-import { Cart } from './components/Cart';
-import { Product } from './components/Product';
-import { ProductDetails } from './components/ProductDetail';
-import { ProductsList } from './components/ProductsList';
+import "react-native-gesture-handler";
+import { NavigationContainer } from "@react-navigation/native";
+import StackNavigator from "./components/Navigation/StackNavigator";
+import DrawerNavigator from "./components/Navigation/DrawerNavigator";
 
-export default function App() {
-  return <ProductsList />;
+function App() {
+  return (
+    <NavigationContainer>
+      <DrawerNavigator />
+    </NavigationContainer>
+  );
 }
+
+export default App;
